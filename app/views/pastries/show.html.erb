@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pastry.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pastry.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @pastry.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_pastry_path(@pastry) %> |
+<%= link_to 'Back', pastries_path %>

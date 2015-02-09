@@ -1,0 +1,10 @@
+<!-- Giving it the bev instance by id (url) -->
+<h1> <%= @beverage.bev_type %> </h1>
+
+<p>This Beverage is a <%= @beverage.roast %> which is <%= @beverage.brew %> brew and I have <%= @beverage.quantity %></p>
+
+<%= link_to 'Back to Beverages List', beverages_path %>
+
+<!-- link to and labeling the link then we say on this particular beverage we are performing this destroy method -->
+<!-- specify method we are performing on this instance of beverage define alert in {}-->
+<%= link_to "Delete this Beverage", :beverage, method: :delete, data: {confirm: 'Are you sure you want to delete this beverage?'} %>

@@ -1,0 +1,34 @@
+<h1>Listing pastries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <!-- erb- embedded ruby -->
+  <!-- looping through  -->
+    <% @pastries.each do |pastry| %>
+      <tr>
+      <!-- like ng-repeat - every pastry in pastries show name, price, quantities -->
+        <td><%= pastry.name %></td>
+        <td><%= pastry.price %></td>
+        <td><%= pastry.quantity %></td>
+        <td><%= link_to 'Show', pastry %></td>
+        <!-- rails helper method -->
+        <!-- link me to edit follow edit path and send me to it's edit view -->
+        <td><%= link_to 'Edit', edit_pastry_path(pastry) %></td>
+        <td><%= link_to 'Destroy', pastry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pastry', new_pastry_path %>

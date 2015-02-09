@@ -1,0 +1,18 @@
+
+<h1>Add a Beverage!</h1>
+
+<!-- starting loop with do and use f as variable for form inputs -->
+<%= form_for @beverage do |f| %>
+<!-- Type: will appear on the form - specify data type on f. with text_field and adding the characteristic-->
+  Type: <%= f.text_field :bev_type %>
+  <!-- can use number.field -->
+  Price: <%= f.text_field :price%>
+  Quantity: <%= f.text_field :quantity%>
+  Roast: <%= f.text_field :roast%>
+  Brew: <%= f.text_field :brew %>
+  <!-- date_field for date inputs -->
+  Expiration Date: <%= f.date_field :expiration_date %>
+  <!-- make a button to submit -->
+  <%= f.submit "Add this Beverage!" %>
+<!-- end the loop no = sign -->
+<% end %>
